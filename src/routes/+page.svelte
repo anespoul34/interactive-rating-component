@@ -39,11 +39,10 @@
     <p class="appreciation">We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
   {/if}
   
-
 </main>
 <footer class="attribution">
   Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-  Coded by <a href="https://www.arthurnespoulous.com" target="_blank">AN</a>.
+  Coded by <a href="https://www.github.com/anespoul34" target="_blank">AN</a>.
 </footer>
 
 <style lang="scss">
