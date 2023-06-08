@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
 
 // Fonts
-$font: 'Poppins', sans-serif;
-$f-size: 32px;
+$font: 'Overpass', sans-serif;
+$f-size: 15px;
 // Primary Colors
-$purple: hsl(259, 100%,  65%);
-$red: hsl(0,100%, 67%);
+$primary: hsl(0, 0%, 100%);
+$secondary: hsl(25, 97%, 53%);
 // Neutral Colors
 $white: hsl(0, 0%, 100%);
-$offWhite: hsl(0, 0%, 94%);
-$lightGrey: hsl(0, 0%, 86%);
-$smokeyGrey: hsl(0, 1%, 44%);
-$offBlack: hsl(0, 0%, 8%);
+$lightGrey: hsl(217, 12%, 63%);
+$mediumGrey: hsl(216, 12%, 54%);
+$darkBlue: hsl(216, 19%, 16%);
+$veryDarkBlue: hsl(215, 27%, 12%);
 
 :root {
   font-size: $f-size;
@@ -21,58 +21,61 @@ $offBlack: hsl(0, 0%, 8%);
   box-sizing: border-box;
 }
 
-input, label, p, span {
+main {
+  background: linear-gradient($darkBlue 0%, $veryDarkBlue 40%);
+}
+
+h1, p, input, button {
   font-family: $font;
+  margin: 0px;
 }
-label {
-  letter-spacing: 3px;
-  font-size: 0.35rem;
-  font-weight: 700;
-  margin-bottom: 5px;
-  color: $smokeyGrey;
+h1, button {
+  color: $white;
 }
+p {
+  color: hsla(217, 12%, 63%, 0.8);
+}
+
 input {
+  cursor: pointer;
   outline: none;
-  width: 140px;
-  height: 60px;
-  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
   font-size: 1rem;
-  font-weight: 700;
-  border: 1px solid $lightGrey;
-  color: $offBlack;
-  padding: 0 16px;
+  padding-top: 2px;
+  color: $white;
+  background-color: hsla(216, 12%, 54%, 0.1);
+  border: none;
 }
-input::placeholder {
-  color: $smokeyGrey;
+input:hover {
+  background: $secondary;
 }
-input:hover, input:active, input:focus {
-  border: 1px solid $purple;
-  caret-color: $purple;
-}
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input.selected {
+  background: $lightGrey;
 }
 
 button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background-color: $purple;
+  width: 100%;
+  height: 46px;
+  border-radius: 23px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: $primary;
+  background-color: $secondary;
   border: none;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-
-  img {
-    width: 64%;
-  }
 }
 button:hover {
-  background-color: $offBlack;
+  color: $secondary;
+  background-color: $primary;
 }
 
 .attribution {
@@ -82,13 +85,13 @@ button:hover {
   left: 0;
   font-family: $font;
   font-weight: 400;
-  color: $purple;
+  color: $primary;
   text-align: center;
-  font-size: 0.5rem;
+  font-size: 1rem;
   
   a {
     text-decoration: none;
     font-weight: 700;
-    color: $red;
+    color: $secondary;
   }
 }
